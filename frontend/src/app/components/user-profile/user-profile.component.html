@@ -1,0 +1,21 @@
+<div class="user">
+  <img src="{{ profile.avatar }}" alt="">
+  <span class="nome">{{ profile.nome }}</span>
+  <p>{{ profile.bio }}</p>
+  <ul>
+    <li *ngFor="let repository of profile.repositories">
+      <div class="repository">
+        <div class="info">
+          <span class="full_name">{{ repository.name }}</span>
+          <p>{{ repository.description }}</p>
+        </div>
+        <div class="stats">
+          <span class="material-icons" *ngIf="repository.isPrivate">lock</span>
+          <span class="material-icons" *ngIf="!repository.isPrivate">lock_open</span>
+          <a href="{{repository.url}}" target="blank"><span class="material-icons">launch</span></a>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <a href="{{profile.url}}" target="blank"><span class="material-icons">launch</span>Ver Perfil</a>
+</div>

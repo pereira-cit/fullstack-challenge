@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>
+    <span class="material-icons">face</span>
+    Perfis do Github
+  </h1>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <input
+      type="search"
+      name="term"
+      ngModel
+      placeholder="Adicionar usuário">
+    <button type="submit"><span class="material-icons">add</span></button>
+  </form>
+
+  <div class="list">
+    <app-profile *ngFor="let profile of profiles" [profile]="profile"></app-profile>
+  </div>
+
+</div>
