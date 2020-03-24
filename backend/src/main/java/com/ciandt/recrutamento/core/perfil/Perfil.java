@@ -24,9 +24,7 @@ public class Perfil {
         this.avatarUrl = avatarUrl;
     }
 
-    public String getHtmlUrl() {
-        return htmlUrl;
-    }
+    public String getHtmlUrl() { return htmlUrl; }
 
     public void setHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;

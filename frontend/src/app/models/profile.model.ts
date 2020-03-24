@@ -1,6 +1,6 @@
 import { Repository } from './repoistory.model';
 
-export interface Profile {
+export class Profile {
   avatar: string;
   nome: string;
   bio: string;
